@@ -5,8 +5,8 @@ import html2canvas from 'html2canvas';
 
 function App() {
   // estados 
-  const [linea1,setLinea1] = useState("l1");
-  const [linea2,setLinea2] = useState("l2");
+  const [linea1,setLinea1] = useState("");
+  const [linea2,setLinea2] = useState("");
   const [imagen,setImagen] = useState("");
 
   const onChangeLinea1 = function(evt){
