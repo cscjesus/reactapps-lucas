@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import html2canvas from 'html2canvas';
@@ -50,9 +50,9 @@ function App() {
         <option value="smart">Smart Guy</option>
       </select> <br/>
       {/* input text - primer linea */}
-      <input type="text" placeholder='linea 1' onChange={onChangeLinea1} /> <br/>
+      <input type="text" placeholder='linea 1' onChange={onChangeLinea1} value={linea1}/> <br/>
       {/* input text - segunda linea */}
-      <input type="text" placeholder='linea 2' onChange={onChangeLinea2}/> <br/>
+      <input type="text" placeholder='linea 2' onChange={onChangeLinea2} value={linea2}/> <br/>
       {/* boton exportar */}
       <button onClick={onClickExportar}>Exportar</button>
       <button onClick={onClickBotonLimpiar}>Limpiar</button>
@@ -60,10 +60,12 @@ function App() {
       <div className='meme' id='meme'>
         <span>{linea1}</span> <br/>
         <span>{linea2}</span>
-        <img src={'/img/'+imagen+'.jpg'}/>
+        <img src={`/img/${imagen}.jpg`} alt={imagen}/>
       </div>
     </div>
   );
 }
 
 export default App;
+
+// https://blog.devgenius.io/convert-your-react-application-to-an-andriod-ios-app-using-cordova-87646729c2b7
